@@ -1,0 +1,40 @@
+{
+  "name": "Bostadsproduktion",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "dependencies": {
+    "babel-loader": "^6.2.0",
+    "babel-plugin-add-module-exports": "^0.1.2",
+    "babel-plugin-react-html-attrs": "^2.0.0",
+    "babel-plugin-transform-class-properties": "^6.3.13",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "babel-preset-stage-0": "^6.3.13",
+    "bootstrap": "^3.3.6",
+    "css-loader": "^0.23.1",
+    "jquery": "^2.2.4",
+    "rc-slider": "^3.7.0",
+    "react": "^15.1.0",
+    "react-bootstrap": "^0.29.4",
+    "react-bootstrap-slider": "^1.0.0",
+    "react-bootstrap-table": "file:///Library/WebServer/Documents/react-bootstrap-table_pa",
+    "react-dom": "^15.1.0",
+    "react-slider": "^0.6.1",
+    "react-tabs": "^0.5.3",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.12.9",
+    "webpack-dev-server": "^1.14.1"
+  },
+  "devDependencies": {
+    "webpack": "^1.13.0"
+  },
+  "scripts": {
+    "dev": "./node_modules/.bin/webpack-dev-server --content-base src --inline --hot",
+    "prod": "NODE_ENV=production node node_modules/.bin/webpack && cp src/index.html dist/index.html && cp -r src/style dist && cp -r src/fonts dist && cp -r dist/* /Volumes/htdocs/bostad",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Peter Ahlstrom",
+  "license": "MIT"
+}

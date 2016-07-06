@@ -1,0 +1,43 @@
+#editableBtn {
+	padding: 0.4em;
+	margin: 0.5em;
+	float: right;
+}
+
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td  {
+	padding: 3px;
+}
+
+#app {
+	padding: 0.6em;
+}
+
+.floatRight {
+	float: right;
+}
+
+p {
+	margin: 0;
+}
+
+#slider {
+	width: 50%;
+    margin: 2em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 1s 2s, opacity 5s linear;
+}
+
+.fifteen {
+	width: 15%;
+}
