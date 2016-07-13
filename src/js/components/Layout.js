@@ -22,7 +22,7 @@ export default class Layout extends React.Component {
 		this.state = {
 			data: [],								//Array with data from get_all.py
 			listItems: {plan_person_list:[]},		//Arrays with items for dropdown menus in table; ex. Projektskede
-			editable: true,							//Is table editable? Changed with editableBtn
+			editable: false,							//Is table editable? Changed with editableBtn
 			editableBtn: {							//Button for toggle editable
 				btnClass: 'btn btn-warning',
 				labelClass: 'fa fa-lock'
@@ -308,18 +308,17 @@ export default class Layout extends React.Component {
 	generateColumns(){
 			let key_list = this.state.bostadColumns;
 			let self = this;
-			function columnHidden(columnHeader) {
-				const YEAR = parseInt(columnHeader.substring(0,4));
-				const MIN = self.state.columnRangeVisible.min;
-				const MAX = self.state.columnRangeVisible.max;
-
-				if (YEAR <= MAX && YEAR >= MIN) { return false;}
-				else return true;
-			}
 
 			let columns = key_list.map( (key) => {
-						return [<TableHeaderColumn dataField={key} key={key} dataAlign="left" hidden={columnHidden(key)} dataSort={true} class="text-capitalize">{this.paragraphy(key, '_')}</TableHeaderColumn>]
-					});
+					const YEAR = parseInt(key.substring(0,4));
+					const MIN = this.state.columnRangeVisible.min;
+					const MAX = this.state.columnRangeVisible.max;
+					if (YEAR <= MAX && YEAR >= MIN) {
+						return [<TableHeaderColumn dataField={key} key={key} dataAlign="left" dataSort={true} class="text-capitalize">{this.paragraphy(key, '_')}</TableHeaderColumn>]
+					}
+					else return []
+				
+			});
 
 			return columns
 		}
