@@ -19,7 +19,7 @@
     "react": "^15.1.0",
     "react-bootstrap": "^0.29.4",
     "react-bootstrap-slider": "^1.0.0",
-    "react-bootstrap-table": "file:///Library/WebServer/Documents/react-bootstrap-table_pa",
+    "react-bootstrap-table": "git://github.com/peterahlstrom/react-bootstrap-table.git",
     "react-dom": "^15.1.0",
     "react-slider": "^0.6.1",
     "react-tabs": "^0.5.3",
